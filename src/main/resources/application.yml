@@ -30,6 +30,14 @@ springdoc:
     operations-sorter: method
     tags-sorter: alpha
 
+
+
+
+
+
+
+
+
 app:
   jwt:
     secret: ${JWT_SECRET}
