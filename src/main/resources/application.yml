@@ -4,6 +4,11 @@ spring:
       max-file-size: 10MB
       max-request-size: 50MB
 
+
+
+
+
+
   jpa:
     open-in-view: false
     hibernate:
@@ -29,6 +34,16 @@ springdoc:
     path: ${SPRINGDOC_SWAGGER_UI_PATH}
     operations-sorter: method
     tags-sorter: alpha
+
+
+
+
+
+
+
+
+
+
 
 app:
   jwt:
