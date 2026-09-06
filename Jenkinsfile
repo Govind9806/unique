@@ -29,7 +29,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    sh './mvnw sonar:sonar'
+                    sh './mvnw org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
                 }
             }
         }
