@@ -50,7 +50,15 @@ pipeline {
 
         stage('Trivy Scan') {
             steps {
-                sh 'trivy image --severity HIGH,CRITICAL --exit-code 1 ${IMAGE_NAME}:${IMAGE_TAG}'
+                sh '''
+                    mkdir -p /tmp/trivy-cache-${BUILD_NUMBER}
+
+                    trivy image \
+                        --cache-dir /tmp/trivy-cache-${BUILD_NUMBER} \
+                        --severity HIGH,CRITICAL \
+                        --exit-code 1 \
+                        ${IMAGE_NAME}:${IMAGE_TAG}
+                '''
             }
         }
     }
