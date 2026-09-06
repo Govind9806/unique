@@ -38,6 +38,9 @@ springdoc:
 
 
 
+
+
+
 app:
   jwt:
     secret: ${JWT_SECRET}
